@@ -41,3 +41,8 @@ func _on_Player_body_entered(body):
 	emit_signal("hit")
 	# S'ha d'ajornar, ja que no podem canviar les propietats físiques en una crida de retorn de física.
 	$CollisionShape2D.set_deferred("disabled", true)
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
