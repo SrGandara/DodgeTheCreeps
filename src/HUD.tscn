@@ -21,7 +21,7 @@ text = "0
 "
 align = 1
 
-[node name="Missatge" type="Label" parent="."]
+[node name="Message" type="Label" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
