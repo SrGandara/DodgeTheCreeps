@@ -53,12 +53,22 @@ rotation = -0.0169474
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = -28.84
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = -36.706
+
+[node name="Player2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 232, 224 )
+move_right = "alt_move_right"
+move_left = "alt_move_left"
+move_down = "alt_move_down"
+move_up = "alt_move_up"
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]
+[connection signal="hit" from="Player2" to="." method="game_over"]
